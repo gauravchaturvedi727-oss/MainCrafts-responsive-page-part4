@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager - MainCrafts</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                <a href="index.html">MainCrafts</a>
+            </div>
+
+            <button class="menu-btn">☰</button>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="task-manager.html" class="active">
+                        Task Manager
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="task-dashboard">
+
+            <div class="task-header">
+
+                <div>
+                    <p class="task-label">MainCrafts Internship</p>
+
+                    <h1>Task Manager</h1>
+
+                    <p>
+                        Manage your daily tasks easily.
+                    </p>
+                </div>
+                <div class="task-stats">
+
+                    <div class="stat-box">
+                        <h3 id="totalTasks">0</h3>
+                        <p>Total</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3 id="completedTasks">0</h3>
+                        <p>Completed</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3 id="pendingTasks">0</h3>
+                        <p>Pending</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="task-controls">
+
+                <form id="taskForm">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter a new task..."
+                    >
+
+                    <button type="submit">
+                        Add Task
+                    </button>
+
+                </form>
+
+                <div class="task-filter">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search tasks..."
+                    >
+
+                    <select id="filterSelect">
+
+                        <option value="all">
+                            All Tasks
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Task List -->
+            <div class="task-container">
+
+                <div class="task-title">
+
+                    <h2>Your Tasks</h2>
+
+                    <span id="taskCount">
+                        0 tasks
+                    </span>
+
+                </div>
+
+
+                <div id="taskList">
+                    <!-- Tasks will come here -->
+                </div>
+
+
+                <div id="emptyState">
+
+                    <div class="empty-icon">
+                        ✓
+                    </div>
+
+                    <h3>No tasks found</h3>
+
+                    <p>
+                        Add a task to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+
+        <div class="footer-content">
+
+            <p>
+                &copy; 2025 MainCrafts. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="task-manager.js"></script>
+
+</body>
+
+</html>
